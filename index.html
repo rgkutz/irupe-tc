@@ -3,119 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Consultoría</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css">
+    <title>Servicios de Seguridad Informática</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f9fafb;
+        body.dark {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        body.dark header {
+            background-color: #1f1f1f;
+        }
+        body.dark footer {
+            background-color: #1f1f1f;
         }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="bg-white shadow">
-        <nav class="max-w-6xl mx-auto p-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-gray-800">Mi Empresa</a>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+    <header class="bg-gray-800 text-white p-4">
+        <h1 class="text-xl">Servicios de Seguridad Informática</h1>
+        <nav>
             <ul class="flex space-x-4">
-                <li><a href="#network-security" class="text-gray-600 hover:text-gray-800">Network Security</a></li>
-                <li><a href="#oam" class="text-gray-600 hover:text-gray-800">OAM</a></li>
-                <li><a href="#consulting" class="text-gray-600 hover:text-gray-800">Asesoría</a></li>
-                <li><a href="#infrastructure" class="text-gray-600 hover:text-gray-800">Infraestructura</a></li>
-                <li><a href="#team" class="text-gray-600 hover:text-gray-800">Equipo</a></li>
+                <li><a href="#network-security" class="hover:underline">Auditoría e Implementación de Network Security</a></li>
+                <li><a href="#oam" class="hover:underline">OAM de Servicios de Misión Crítica</a></li>
+                <li><a href="#consultancy" class="hover:underline">Asesoría ante Entes Nacionales e Internacionales</a></li>
+                <li><a href="#infrastructure" class="hover:underline">Dimensionamiento de Infraestructura</a></li>
             </ul>
         </nav>
     </header>
-    <main class="flex-grow">
-        <section class="py-10 max-w-6xl mx-auto" id="network-security">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Auditoría e implementación de Network Security</h2>
-            <p class="text-gray-600 mb-4">
-                Protege tu red con soluciones de seguridad de última generación. 
-                Nuestras alianzas estratégicas con los líderes del mercado nos permiten implementar soluciones de seguridad perimetral y segmentación de redes a medida. Con firewalls de última generación, sistemas de detección y prevención de intrusiones (IDS/IPS) y redes privadas virtuales (VPNs), aseguramos la protección de tus datos más sensibles.
-            </p>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Beneficios para tu negocio:</h3>
-            <ul class="list-disc list-inside text-gray-600 mb-4">
+
+    <main class="p-6">
+        <section id="network-security" class="mb-10">
+            <h2 class="text-2xl font-bold">Auditoría e Implementación de Network Security</h2>
+            <p class="mt-2">Protege tu red con soluciones de seguridad de última generación.</p>
+            <p>Nuestras alianzas estratégicas con los líderes del mercado nos permiten implementar soluciones de seguridad perimetral y segmentación de redes a medida.</p>
+            <p class="font-semibold">Beneficios para tu negocio:</p>
+            <ul class="list-disc list-inside">
                 <li>Mayor protección contra ciberataques.</li>
                 <li>Cumplimiento normativo con estándares como PCI DSS y GDPR.</li>
                 <li>Reducción de riesgos y costos asociados a incidentes de seguridad.</li>
                 <li>Mejora de la continuidad del negocio.</li>
             </ul>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Cómo lo hacemos?</h3>
-            <ol class="list-decimal list-inside text-gray-600 mb-4">
-                <li>Análisis exhaustivo de tu entorno: Evaluamos tus necesidades y riesgos específicos.</li>
-                <li>Diseño de una solución personalizada: Seleccionamos las tecnologías más adecuadas para tu infraestructura.</li>
-                <li>Implementación y configuración: Instalamos y configuramos las soluciones de seguridad.</li>
-                <li>Monitoreo y mantenimiento: Realizamos un seguimiento continuo de tu sistema para garantizar su óptimo funcionamiento.</li>
-            </ol>
-        </section>
-
-        <section class="py-10 max-w-6xl mx-auto" id="oam">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4">OAM de servicios de misión crítica</h2>
-            <p class="text-gray-600 mb-4">
-                Para garantizar la alta disponibilidad y el rendimiento de los servicios, utilizamos herramientas de monitoreo y gestión especializadas. Nuestro proceso de diseño e implementación incluye pasos meticulosos para asegurar la calidad del servicio.
-            </p>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Herramientas y tecnologías utilizadas:</h3>
-            <ul class="list-disc list-inside text-gray-600 mb-4">
-                <li>Monitoreo en tiempo real de servicios críticos.</li>
-                <li>Gestión de incidentes y problemas mediante sistemas especializados.</li>
-            </ul>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Beneficios de externalizar el OAM:</h3>
-            <ul class="list-disc list-inside text-gray-600 mb-4">
-                <li>Reducción de costos operativos.</li>
-                <li>Acceso a expertise especializado en OAM.</li>
-                <li>Mayor enfoque en el negocio al dejar la gestión en manos expertas.</li>
+            <p class="font-semibold">¿Cómo lo hacemos?</p>
+            <ul class="list-disc list-inside">
+                <li>Análisis exhaustivo de tu entorno.</li>
+                <li>Diseño de una solución personalizada.</li>
+                <li>Implementación y configuración.</li>
+                <li>Monitoreo y mantenimiento.</li>
             </ul>
         </section>
 
-        <section class="py-10 max-w-6xl mx-auto" id="consulting">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Asesoría ante entes nacionales e internacionales</h2>
-            <p class="text-gray-600 mb-4">
-                Nuestro equipo está especializado en gestionar trámites ante entes como LACNIC y ENACOM. Aportamos nuestra experiencia para ayudar a los clientes a cumplir con los requisitos regulatorios, agilizando procesos y reduciendo el riesgo de errores.
-            </p>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Servicios de asesoría:</h3>
-            <ul class="list-disc list-inside text-gray-600 mb-4">
-                <li>Gestión de trámites y cumplimiento regulatorio.</li>
-                <li>Asesoría en normativas de seguridad y tecnología.</li>
-            </ul>
+        <section id="oam" class="mb-10">
+            <h2 class="text-2xl font-bold">OAM de Servicios de Misión Crítica</h2>
+            <p>Detalla las herramientas y tecnologías utilizadas.</p>
         </section>
 
-        <section class="py-10 max-w-6xl mx-auto" id="infrastructure">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Dimensionamiento de infraestructura</h2>
-            <p class="text-gray-600 mb-4">
-                Un correcto dimensionamiento de la infraestructura es fundamental para el rendimiento y la seguridad. Evaluamos factores clave para asegurar que la infraestructura sea escalable y eficiente.
-            </p>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Importancia del dimensionamiento adecuado:</h3>
-            <p class="text-gray-600 mb-4">
-                Un dimensionamiento inadecuado puede acarrear consecuencias graves, afectando tanto el rendimiento como la seguridad de la infraestructura.
-            </p>
+        <section id="consultancy" class="mb-10">
+            <h2 class="text-2xl font-bold">Asesoría ante Entes Nacionales e Internacionales</h2>
+            <p>Especifica los servicios de asesoría.</p>
         </section>
 
-        <section class="py-10 max-w-6xl mx-auto" id="team">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Nuestro Equipo</h2>
-            <p class="text-gray-600 mb-4">
-                Contamos con un equipo técnico altamente calificado, con certificaciones en las principales tecnologías y estándares de seguridad. Su experiencia nos permite ofrecer soluciones de calidad y confianza.
-            </p>
+        <section id="infrastructure" class="mb-10">
+            <h2 class="text-2xl font-bold">Dimensionamiento de Infraestructura</h2>
+            <p>Explica el proceso de dimensionamiento.</p>
         </section>
 
-        <section class="py-10 max-w-6xl mx-auto">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Contacto</h2>
-            <p class="text-gray-600 mb-4">
-                Para consultas o más información, contáctanos a través de nuestra página de contacto o envíanos un email a: <a href="mailto:info@tuempresa.com" class="text-blue-600">info@tuempresa.com</a>.
-            </p>
-            <div class="flex items-center space-x-4">
-                <a href="https://wa.me/1234567890" class="text-green-500 hover:text-green-700">
-                    <i class="fab fa-whatsapp fa-2x"></i>
-                </a>
-                <a href="mailto:info@tuempresa.com" class="text-blue-600 hover:text-blue-800">
-                    <i class="fas fa-envelope fa-2x"></i>
-                </a>
-            </div>
+        <section id="contact">
+            <h2 class="text-2xl font-bold">Contáctanos</h2>
+            <p>Para consultas, escríbenos a: <a href="mailto:info@empresa.com" class="text-blue-500 hover:underline">info@empresa.com</a></p>
+            <p>También puedes enviarnos un mensaje por WhatsApp: <a href="https://api.whatsapp.com/send?phone=1234567890" class="text-blue-500 hover:underline">Enviar WhatsApp</a></p>
         </section>
     </main>
 
-    <footer class="bg-white shadow">
-        <div class="max-w-6xl mx-auto p-4 text-center">
-            <p class="text-gray-600">&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
-        </div>
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
     </footer>
+
+    <button id="toggle-theme" class="fixed top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded">Modo Oscuro</button>
+
+    <script>
+        const toggleThemeBtn = document.getElementById('toggle-theme');
+        toggleThemeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggleThemeBtn.textContent = document.body.classList.contains('dark') ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script>
 </body>
 </html>
