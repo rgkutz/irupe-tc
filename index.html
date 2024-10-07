@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irupe Asesores en Tecnología</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Script para resaltar el menú activo
+    function setActiveMenu(sectionId) {
+      const menuItems = document.querySelectorAll("nav a");
+      menuItems.forEach(item => {
+        item.classList.remove("bg-gray-700", "text-white");
+      });
+      document.querySelector(`#${sectionId}-menu`).classList.add("bg-gray-700", "text-white");
+    }
+
+    // Script para alternar la visibilidad de la barra lateral
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebar = document.getElementById("sidebar");
+      const sidebarToggle = document.getElementById("sidebar-toggle");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <div class="flex h-screen">
+        <!-- Botón para ocultar/mostrar la barra lateral -->
+        <button id="sidebar-toggle" class="absolute top-4 left-4 text-gray-500 hover:text-gray-400 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM4 15a1 1 0 100 2h12a1 1 0 100-2H4z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      
+        <!-- Barra lateral -->
+        <div id="sidebar" class="w-64 bg-gray-800 p-6 text-white transform transition-transform duration-300 ease-in-out -translate-x-full md:translate-x-0">
+          <div class="text-2xl font-semibold mb-6">Irupe Asesores</div>
+          <nav class="space-y-4">
+            <a href="#network" id="network-menu" onclick="setActiveMenu('network')" class="block py-2 px-4 hover:bg-gray-700 rounded">Network Security</a>
+            <a href="#oam" id="oam-menu" onclick="setActiveMenu('oam')" class="block py-2 px-4 hover:bg-gray-700 rounded">OAM (Operación, Administración y Monitoreo)</a>
+            <a href="#asesoria" id="asesoria-menu" onclick="setActiveMenu('asesoria')" class="block py-2 px-4 hover:bg-gray-700 rounded">Asesoría ante entes</a>
+            <a href="#infraestructura" id="infraestructura-menu" onclick="setActiveMenu('infraestructura')" class="block py-2 px-4 hover:bg-gray-700 rounded">Dimensionamiento de Infraestructura</a>
+            <a href="#contacto" id="contacto-menu" onclick="setActiveMenu('contacto')" class="block py-2 px-4 hover:bg-gray-700 rounded">Contacto</a>
+          </nav>
+        </div>
+
+    <!-- Contenido principal -->
+    <main class="flex-1 p-6">
+      <!-- Título principal -->
+      <section class="mb-12">
+        <h1 class="text-4xl font-bold mb-4">Irupe Asesores en Tecnología y Comunicaciones</h1>
+        <p class="text-gray-400">Soluciones integrales en seguridad y comunicaciones.</p>
+      </section>
+
+      <!-- Sección Auditoría de Network Security -->
+      <section id="network" class="mb-12">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mr-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c2.21 0 4-1.79 4-4 0-2.21-1.79-4-4-4S8 4.79 8 7c0 2.21 1.79 4 4 4zM6 22c0-2.21 3-4 6-4s6 1.79 6 4"/></svg>
+            <h2 class="text-2xl font-semibold">Auditoría e Implementación de Network Security</h2>
+          </div>
+          <p class="text-gray-400">
+            Nuestras alianzas estratégicas con los fabricantes líderes en seguridad de redes nos permiten
+            implementar las mejores soluciones en seguridad perimetral y segmentación de redes internas.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección OAM de servicios críticos -->
+      <section id="oam" class="mb-12">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mr-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17h4.5m-2.25-7h4.5M7.5 7h4.5M12 7H7.5m5.25 0H17"/></svg>
+            <h2 class="text-2xl font-semibold">OAM (Operación, Administración y Monitoreo) de Servicios Críticos</h2>
+          </div>
+          <p class="text-gray-400">
+            Diseñamos e implementamos soluciones de seguridad operando con herramientas especializadas. 
+            Monitoreo 24x7 de sistemas y servicios críticos para nuestros clientes.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección Asesoría Nacional e Internacional -->
+      <section id="asesoria" class="mb-12">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mr-4 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v8m-6-6h12"/></svg>
+            <h2 class="text-2xl font-semibold">Asesoría ante Entes Nacionales e Internacionales</h2>
+          </div>
+          <p class="text-gray-400">
+            Asesoría y seguimiento ante LACNIC, ENACOM y otros organismos para la asignación de recursos 
+            y dimensionamiento de infraestructura.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección Contacto -->
+      <section id="contacto" class="mb-12">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mr-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4V4z"/></svg>
+            <h2 class="text-2xl font-semibold">Contacto</h2>
+          </div>
+          <p class="text-gray-400">
+            Para consultas o más información, contáctanos a través de nuestra página de contacto.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
