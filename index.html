@@ -56,17 +56,15 @@
    </style>
 </head>
 
-<body class="min-h-screen bg-gray-900 text-gray-200 flex" onscroll="handleScroll()">
+<body class="min-h-screen bg-gray-900 text-gray-200 flex flex-col md:flex-row">
 
    <!-- Sidebar -->
-   <aside class="w-64 bg-gray-800 h-screen p-4 flex flex-col fixed">
+   <aside class="w-full md:w-64 bg-gray-800 h-auto p-4 flex flex-col fixed md:relative">
       <div class="flex items-center justify-center mb-8">
-         <!-- Logo -->
          <img src="logo.webp" alt="Logo" class="h-10 w-10 mr-3">
          <span class="text-lg font-semibold text-white">Irupé Telecomunicaciones</span>
       </div>
 
-      <!-- Menú de navegación -->
       <nav class="flex flex-col space-y-4 flex-wrap">
          <a href="#services" class="text-gray-400 hover:text-white flex items-center">
             <i class="fas fa-server mr-2"></i> Servicios
@@ -79,7 +77,6 @@
          </a>
       </nav>
 
-      <!-- Explorar -->
       <div class="mt-auto">
          <hr class="border-gray-600 my-4">
          <p class="text-gray-400 text-sm mb-2">Explorar</p>
@@ -90,7 +87,7 @@
    </aside>
 
    <!-- Main Content -->
-   <div class="flex-1 ml-64">
+   <div class="flex-1 ml-0 md:ml-64">
 
       <!-- Header -->
       <header class="bg-gray-800 p-4 shadow-lg flex items-center">
@@ -99,10 +96,8 @@
 
       <!-- Hero Section -->
       <section class="flex-1 flex items-center justify-center text-center bg-gray-700 p-8">
-         <div class="fade-in">
-            <h2 class="text-4xl font-extrabold text-white mb-4">Asesoramiento en Telecomunicaciones</h2>
-            <p class="text-lg text-gray-300">Soluciones personalizadas para optimizar tus redes y telecomunicaciones.</p>
-         </div>
+         <h2 class="text-4xl font-extrabold text-white mb-4">Asesoramiento en Telecomunicaciones</h2>
+         <p class="text-lg text-gray-300">Soluciones personalizadas para optimizar tus redes y telecomunicaciones.</p>
       </section>
 
       <!-- Services Section -->
@@ -114,9 +109,7 @@
             <h4 class="text-2xl font-semibold text-green-400 mb-2">Auditoría e Implementación de Network Security</h4>
             <p class="text-gray-400">Implementamos las mejores soluciones en seguridad perimetral y segmentación de redes internas.</p>
          </div>
-
-         <!-- Otros servicios ... -->
-
+         <!-- Otros servicios aquí -->
       </section>
 
       <!-- Testimonios Section -->
