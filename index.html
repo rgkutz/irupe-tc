@@ -1,91 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irupe Asesores en Tecnología y Comunicaciones </title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body.dark {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        body.dark header {
-            background-color: #1f1f1f;
-        }
-        body.dark footer {
-            background-color: #1f1f1f;
-        }
-    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Irupé Telecomunicaciones</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <style>
+      /* Animaciones al hacer hover */
+      a:hover {
+         transition: color 0.3s ease;
+         color: #38bdf8; /* Cambia el color al pasar el mouse */
+      }
+
+      /* Animaciones de aparición al hacer scroll */
+      .fade-in {
+         opacity: 0;
+         transform: translateY(20px);
+         transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+         opacity: 1;
+         transform: translateY(0);
+      }
+
+      /* Efecto hover en botones */
+      .button:hover {
+         transform: scale(1.05);
+         background-color: #10b981; /* Color verde destacado */
+         transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      /* Testimonios - carrusel simple */
+      .carousel {
+         display: flex;
+         overflow: hidden;
+         width: 100%;
+      }
+
+      .carousel-item {
+         min-width: 100%;
+         transition: transform 0.5s ease;
+      }
+
+      .carousel-nav button {
+         background-color: #10b981;
+         border: none;
+         padding: 0.5rem;
+         margin: 0.5rem;
+         cursor: pointer;
+      }
+   </style>
 </head>
-<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
-    <header class="bg-gray-800 text-white p-4">
-        <h1 class="text-xl">Irupe Asesores en Tecnología y Comunicaciones</h1>
-        <nav>
-            <ul class="flex space-x-4">
-                <li><a href="#network-security" class="hover:underline">Auditoría e Implementación de Network Security</a></li>
-                <li><a href="#oam" class="hover:underline">OAM de Servicios de Misión Crítica</a></li>
-                <li><a href="#consultancy" class="hover:underline">Asesoría ante Entes Nacionales e Internacionales</a></li>
-                <li><a href="#infrastructure" class="hover:underline">Dimensionamiento de Infraestructura</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="p-6">
-        <section id="network-security" class="mb-10">
-            <h2 class="text-2xl font-bold">Auditoría e Implementación de Network Security</h2>
-            <p class="mt-2">Protege tu red con soluciones de seguridad de última generación.</p>
-            <p>Nuestras alianzas estratégicas con los líderes del mercado nos permiten implementar soluciones de seguridad perimetral y segmentación de redes a medida.</p>
-            <p class="font-semibold">Beneficios para tu negocio:</p>
-            <ul class="list-disc list-inside">
-                <li>Mayor protección contra ciberataques.</li>
-                <li>Cumplimiento normativo con estándares como PCI DSS y GDPR.</li>
-                <li>Reducción de riesgos y costos asociados a incidentes de seguridad.</li>
-                <li>Mejora de la continuidad del negocio.</li>
-            </ul>
-            <p class="font-semibold">¿Cómo lo hacemos?</p>
-            <ul class="list-disc list-inside">
-                <li>Análisis exhaustivo de tu entorno.</li>
-                <li>Diseño de una solución personalizada.</li>
-                <li>Implementación y configuración.</li>
-                <li>Monitoreo y mantenimiento.</li>
-            </ul>
-        </section>
+<body class="min-h-screen bg-gray-900 text-gray-200 flex" onscroll="handleScroll()">
 
-        <section id="oam" class="mb-10">
-            <h2 class="text-2xl font-bold">OAM de Servicios de Misión Crítica</h2>
-            <p>Detalla las herramientas y tecnologías utilizadas.</p>
-        </section>
+   <!-- Sidebar -->
+   <aside class="w-64 bg-gray-800 h-screen p-4 flex flex-col fixed">
+      <div class="flex items-center justify-center mb-8">
+         <!-- Logo -->
+         <img src="logo.webp" alt="Logo" class="h-10 w-10 mr-3">
+         <span class="text-lg font-semibold text-white">Irupé Telecomunicaciones</span>
+      </div>
 
-        <section id="consultancy" class="mb-10">
-            <h2 class="text-2xl font-bold">Asesoría ante Entes Nacionales e Internacionales</h2>
-            <p>Especifica los servicios de asesoría.</p>
-        </section>
+      <!-- Menú de navegación -->
+      <nav class="flex flex-col space-y-4 flex-wrap">
+         <a href="#services" class="text-gray-400 hover:text-white flex items-center">
+            <i class="fas fa-server mr-2"></i> Servicios
+         </a>
+         <a href="#testimonials" class="text-gray-400 hover:text-white flex items-center">
+            <i class="fas fa-comments mr-2"></i> Testimonios
+         </a>
+         <a href="#contact" class="text-gray-400 hover:text-white flex items-center">
+            <i class="fas fa-phone-alt mr-2"></i> Contacto
+         </a>
+      </nav>
 
-        <section id="infrastructure" class="mb-10">
-            <h2 class="text-2xl font-bold">Dimensionamiento de Infraestructura</h2>
-            <p>Explica el proceso de dimensionamiento.</p>
-        </section>
+      <!-- Explorar -->
+      <div class="mt-auto">
+         <hr class="border-gray-600 my-4">
+         <p class="text-gray-400 text-sm mb-2">Explorar</p>
+         <a href="#" class="text-gray-400 hover:text-white flex items-center">
+            <i class="fas fa-brain mr-2"></i> Explorar GPT
+         </a>
+      </div>
+   </aside>
 
-        <section id="contact">
-            <h2 class="text-2xl font-bold">Contáctanos</h2>
-            <p>Para consultas, escríbenos a: <a href="mailto:info@empresa.com" class="text-blue-500 hover:underline">info@empresa.com</a></p>
-            <p>También puedes enviarnos un mensaje por WhatsApp: <a href="https://api.whatsapp.com/send?phone=1234567890" class="text-blue-500 hover:underline">Enviar WhatsApp</a></p>
-        </section>
-    </main>
+   <!-- Main Content -->
+   <div class="flex-1 ml-64">
 
-    <footer class="bg-gray-800 text-white text-center p-4">
-        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-    </footer>
+      <!-- Header -->
+      <header class="bg-gray-800 p-4 shadow-lg flex items-center">
+         <h1 class="text-xl font-semibold text-white">Irupé Telecomunicaciones</h1>
+      </header>
 
-    <button id="toggle-theme" class="fixed top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded">Modo Oscuro</button>
+      <!-- Hero Section -->
+      <section class="flex-1 flex items-center justify-center text-center bg-gray-700 p-8">
+         <div class="fade-in">
+            <h2 class="text-4xl font-extrabold text-white mb-4">Asesoramiento en Telecomunicaciones</h2>
+            <p class="text-lg text-gray-300">Soluciones personalizadas para optimizar tus redes y telecomunicaciones.</p>
+         </div>
+      </section>
 
-    <script>
-        const toggleThemeBtn = document.getElementById('toggle-theme');
-        toggleThemeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-            toggleThemeBtn.textContent = document.body.classList.contains('dark') ? 'Modo Claro' : 'Modo Oscuro';
-        });
-    </script>
+      <!-- Services Section -->
+      <section id="services" class="container mx-auto p-6 text-center fade-in">
+         <h3 class="text-3xl font-bold text-white mb-6">Nuestros Servicios</h3>
+
+         <!-- Servicio 1 -->
+         <div class="bg-gray-800 shadow-lg rounded-lg p-6 mb-6">
+            <h4 class="text-2xl font-semibold text-green-400 mb-2">Auditoría e Implementación de Network Security</h4>
+            <p class="text-gray-400">Implementamos las mejores soluciones en seguridad perimetral y segmentación de redes internas.</p>
+         </div>
+
+         <!-- Otros servicios ... -->
+
+      </section>
+
+      <!-- Testimonios Section -->
+      <section id="testimonials" class="container mx-auto p-6 text-center fade-in">
+         <h3 class="text-3xl font-bold text-white mb-6">Testimonios</h3>
+
+         <!-- Carrusel de testimonios -->
+         <div class="carousel">
+            <div class="carousel-item">
+               <p class="text-gray-400">"La empresa fue clave en nuestra implementación de seguridad."</p>
+               <span>- Cliente 1</span>
+            </div>
+            <div class="carousel-item">
+               <p class="text-gray-400">"Su servicio OAM nos ayudó a asegurar nuestros servicios críticos."</p>
+               <span>- Cliente 2</span>
+            </div>
+         </div>
+         <div class="carousel-nav">
+            <button onclick="previousSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+         </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="contact" class="bg-gray-800 p-4 text-center">
+         <p>Contáctanos vía WhatsApp:</p>
+         <a href="https://wa.me/123456789" class="text-green-400 hover:text-green-500">+123 456 789</a>
+         <p class="mt-4">
+            <a href="#top" class="text-green-400 hover:text-green-500">Volver al inicio</a>
+         </p>
+      </footer>
+   </div>
+
+   <script>
+      // Scroll animation
+      function handleScroll() {
+         const fadeElements = document.querySelectorAll('.fade-in');
+         fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= window.innerHeight - 100) {
+               el.classList.add('visible');
+            }
+         });
+      }
+
+      // Carrusel simple
+      let currentSlide = 0;
+      function showSlide(index) {
+         const slides = document.querySelectorAll('.carousel-item');
+         if (index >= slides.length) currentSlide = 0;
+         if (index < 0) currentSlide = slides.length - 1;
+         slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
+         });
+      }
+
+      function nextSlide() {
+         currentSlide++;
+         showSlide(currentSlide);
+      }
+
+      function previousSlide() {
+         currentSlide--;
+         showSlide(currentSlide);
+      }
+
+      // Initialize first slide
+      showSlide(currentSlide);
+   </script>
+
 </body>
+
 </html>
